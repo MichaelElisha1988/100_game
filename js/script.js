@@ -16,6 +16,7 @@ let Corrunt0El = document.getElementById('current--0');
 let Corrunt1El = document.getElementById('current--1');
 
 let corentscore = 0;
+const maxPoints = 100;
 
 function switchPlayer() {
   player0El.classList.contains('player--active')
@@ -32,11 +33,11 @@ function switchPlayer() {
 btnHold.classList.add('hidden');
 btnRoll.classList.add('hidden');
 function isWinner() {
-  if (Number(scoreEl0.textContent) >= 20) {
+  if (Number(scoreEl0.textContent) >= maxPoints) {
     player0El.classList.add('player--winner');
     btnHold.classList.add('hidden');
     btnRoll.classList.add('hidden');
-  } else if (Number(scoreEl1.textContent) >= 20) {
+  } else if (Number(scoreEl1.textContent) >= maxPoints) {
     player1El.classList.add('player--winner');
     btnHold.classList.add('hidden');
     btnRoll.classList.add('hidden');
